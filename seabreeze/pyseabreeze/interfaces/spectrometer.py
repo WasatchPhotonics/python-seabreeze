@@ -495,4 +495,7 @@ class SpectrometerFeatureQEPRO(SpectrometerFeatureOBP):
 class SpectrometerFeatureVENTANA(SpectrometerFeatureOBP):
     pass
 
+class SpectrometerFeatureVENTANA1064(SpectrometerFeatureOBP):
+    pass
+
 

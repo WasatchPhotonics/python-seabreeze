@@ -45,6 +45,10 @@ ATTR{idVendor}=="2457", ATTR{idProduct}=="1040", SYMLINK+="torus-%n", GROUP="plu
 ATTR{idVendor}=="2457", ATTR{idProduct}=="2000", SYMLINK+="jaz-%n", GROUP="plugdev"
 # Ocean Optics Inc. STS spectrometer
 ATTR{idVendor}=="2457", ATTR{idProduct}=="4000", SYMLINK+="sts-%n", GROUP="plugdev"
+# Ocean Optics Inc. Ventana  spectrometer
+ATTR{idVendor}=="2457", ATTR{idProduct}=="5000", SYMLINK+="ventana-%n", GROUP="plugdev"
+# Ocean Optics Inc. Ventana 1064 spectrometer
+ATTR{idVendor}=="2457", ATTR{idProduct}=="5002", SYMLINK+="ventana-%n", GROUP="plugdev"
 # Ocean Optics Inc. Centice Clear Shot II spectrometer
 ATTR{idVendor}=="184c", ATTR{idProduct}=="0000", SYMLINK+="clearshot2-%n", GROUP="plugdev"
 # unprogrammed EzUSB

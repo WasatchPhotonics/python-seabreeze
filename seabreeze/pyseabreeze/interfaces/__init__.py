@@ -19,6 +19,7 @@ from .spectrometer import (
                             SpectrometerFeatureSTS,
                             SpectrometerFeatureQEPRO,
                             SpectrometerFeatureVENTANA,
+                            SpectrometerFeatureVENTANA1064,
                           )
 
 from .wavelength import WavelengthCoefficientsEEPromFeature
@@ -316,6 +317,20 @@ class VENTANA(SpectrometerFeatureVENTANA,
     _INTEGRATION_TIME_BASE = 1
     _MAX_PIXEL_VALUE = 65535
 
+class VENTANA1064(SpectrometerFeatureVENTANA1064,
+             ThermoElectricFeatureOBP,
+             NonlinearityCoefficientsOBPFeature,
+             NoEEPromFeature,
+             NoShutterFeature,
+             NotImplementedWrapper):
+    _ENDPOINT_MAP = EndPoints['VENTANA1064']
+    _PIXELS = 512 # FIXME
+    _RAW_SPECTRUM_LEN = (512 * 2)  # XXX: No Sync byte!
+    _INTEGRATION_TIME_MIN = 1
+    _INTEGRATION_TIME_MAX = 600000
+    _INTEGRATION_TIME_BASE = 1
+    _MAX_PIXEL_VALUE = 65535
+
 
 USBInterfaces = {
     0x1002: USB2000,
@@ -337,5 +352,6 @@ USBInterfaces = {
     0x4000: STS,
     0x4004: QEPRO,
     0x5000: VENTANA,
+    0x5002: VENTANA1064,
 }
 

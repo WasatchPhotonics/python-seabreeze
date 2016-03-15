@@ -26,6 +26,7 @@ ModelNames = {
     0x4000: 'STS',
     0x4004: 'QEPRO',
     0x5000: 'VENTANA',
+    0x5002: 'VENTANA1064',
 }
 ProductIds = list(ModelNames.keys())
 SpectrometerClasses = list(ModelNames.values())
@@ -50,6 +51,7 @@ DarkPixels = {
     'STS'	  : [],
     'QEPRO'	  : list(range(0, 4)) + list(range(1040, 1044)),
     'VENTANA'	  : [],
+    'VENTANA1064'	  : [],
 }
 
 
@@ -87,6 +89,7 @@ EndPoints= {
      'STS'	   : _EMDUAL,
      'QEPRO'	   : _EMDUAL,
      'VENTANA'	   : _EMVENT,
+     'VENTANA1064' : _EMVENT,
 }
 
 
@@ -173,6 +176,7 @@ TriggerModes = {
         },
     'QEPRO'	   : dict(),  # FIXME
     'VENTANA'	   : dict(),  # FIXME
+    'VENTANA1064'  : dict(),  # FIXME
     'USB650'	   : {  # ??? assumed.
        'FREE_RUNNING' : 0,
        'SOFTWARE'     : 1,
